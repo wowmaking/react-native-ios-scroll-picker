@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es6",
+    "declaration": true,
+    "outDir": "./lib",
+    "strict": true,
+    "jsx": "react-native",
+    "skipLibCheck": true
+  },
+  "include": ["src", "node_modules/react-native-redash/lib/typescript/v1/index.d.ts"],
+  "exclude": ["node_modules", "lib"]
+}

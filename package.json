@@ -1,0 +1,51 @@
+{
+  "name": "react-native-ios-scroll-picker",
+  "version": "1.0.0",
+  "description": "Scroll picker like ios",
+  "scripts": {
+    "build": "tsc --project ./tsconfig.json",
+    "lint": "tslint --fix -p ./tsconfig.json",
+    "prepare": "bob build"
+  },
+  "author": "Dmitry Chistik",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "react-native-gesture-handler": "*",
+    "react-native-reanimated": "*",
+    "react-native-redash": "*"
+  },
+  "devDependencies": {
+    "react-native-builder-bob": "^0.18.1",
+    "typescript": "^4.4.3"
+  },
+  "main": "lib/module/index.js",
+  "types": "lib/typescript/src/index.d.ts",
+  "files": [
+    "src",
+    "lib",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__",
+    "lib/**/*"
+  ],
+  "react-native": "src/index.tsx",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dchystsik/react-native-ios-scroll-picker.git"
+  },
+  "module": "lib/module/index.js",
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "module",
+      "typescript"
+    ]
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/"
+  ]
+}
