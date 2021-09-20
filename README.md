@@ -51,7 +51,7 @@ const App = () => {
   return (
     <View style={styles.pickerContainer}>
       <Picker
-        values={data} 
+        values={years} 
         containerWidth={120}
         defaultValue={defaultValue} 
         withTranslateZ={true}

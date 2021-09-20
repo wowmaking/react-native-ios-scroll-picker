@@ -8,6 +8,7 @@ import Animated, {
   call,
 } from 'react-native-reanimated';
 import { PanGestureHandler } from 'react-native-gesture-handler';
+import RNHapticFeedback from 'react-native-haptic-feedback';
 
 import { usePanGestureHandler } from  './redash';
 import { withDecay } from './animationHelpers';
@@ -51,6 +52,11 @@ const GestureHandler = ({ value, max, onValueChange, defaultValue, values, visib
   useCode(() => call([translateY], ([currentValue]: any): void => {
     const selectedIndex = Math.round(-currentValue / itemHeight);
     const newValue = values[selectedIndex]?.value;
+
+    RNHapticFeedback.trigger('selection', {
+      enableVibrateFallback: false,
+      ignoreAndroidSystemSettings: false,
+    });
 
     if (typeof onValueChange === 'function' && newValue) {
       onValueChange(newValue);
