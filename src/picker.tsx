@@ -17,12 +17,12 @@ import GestureHandler from './gestureHandler';
 const perspective = 1600;
 
 interface PickerProps {
+  values: { value: number | string; label: string }[];
   containerWidth: number;
-  defaultValue: number;
   visibleItems: number;
   itemHeight: number;
-  values: { value: number; label: string }[];
-  onChange?: (value: number) => void;
+  defaultValue?: number | string;
+  onChange?: (value: number | string) => void;
   withTranslateZ?: boolean;
   withScale?: boolean;
   withOpacity?: boolean;

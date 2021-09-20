@@ -25,12 +25,12 @@ interface WithDecayParams {
   state: Animated.Node<State>;
   offset: Animated.Value<number>;
   snapPoints: number[];
-  defaultValue: number;
-  values: { value: number; label: string }[];
+  defaultValue?: number | string;
+  values: { value: number | string; label: string }[];
 }
 
 export const withDecay = (params: WithDecayParams) => {
-  const { itemHeight, value, velocity, state: gestureState, offset, snapPoints, values, defaultValue } = {
+  const { itemHeight, value, velocity, state: gestureState, offset, snapPoints, values, defaultValue = 1 } = {
     ...params,
   };
   const init = new Value(0);

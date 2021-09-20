@@ -13,13 +13,13 @@ import { usePanGestureHandler } from  './redash';
 import { withDecay } from './animationHelpers';
 
 interface GestureHandlerProps {
-  values: { value: number; label: string }[];
+  values: { value: number | string; label: string }[];
   visibleItems: number;
   itemHeight: number;
   value: Animated.Value<number>;
   max: number;
-  defaultValue: number;
-  onValueChange?: (value: number) => void;
+  defaultValue?: number | string;
+  onValueChange?: (value: number | string) => void;
 }
 
 const GestureHandler = ({ value, max, onValueChange, defaultValue, values, visibleItems, itemHeight }: GestureHandlerProps) => {
