@@ -2,7 +2,7 @@
 
 Scroll picker like `IOS UIDatePicker` for React Native on iOS and Android
 
-[![npm version](https://badge.fury.io/js/@wowmaking/react-native-ios-scroll-picker.svg)](https://badge.fury.io/js/@wowmaking/react-native-ios-scroll-picker)
+[![npm version](https://badge.fury.io/js/@wowmaking%2Freact-native-ios-scroll-picker.svg)](https://badge.fury.io/js/@wowmaking%2Freact-native-ios-scroll-picker)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ![](gifs/1.gif)  |  ![](gifs/2.gif) |  ![](gifs/3.gif)  |  ![](gifs/4.gif)  |
