@@ -16,7 +16,10 @@
     "picker",
     "ios-picker",
     "scroll-picker",
-    "wowmaking"
+    "wowmaking",
+    "reanimated",
+    "react-native-reanimated",
+    "react-native-gesture-handler"
   ],
   "peerDependencies": {
     "react": "*",

@@ -1,6 +1,6 @@
 # @wowmaking/react-native-ios-scroll-picker
 
-Scroll picker like `IOS UIDatePicker` for React Native on iOS and Android
+React Native Scroll Picker like `IOS UIDatePicker` on iOS and Android
 
 [![npm version](https://badge.fury.io/js/@wowmaking%2Freact-native-ios-scroll-picker.svg)](https://badge.fury.io/js/@wowmaking%2Freact-native-ios-scroll-picker)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -44,12 +44,12 @@ const App = () => {
   const defaultValue = 2010;
   const [currentValue, setCurrentValue] = useState(defaultValue);
 
-  const handelPickerItemChange = (value: any) => {
+  const handelPickerItemChange = (value) => {
     setCurrentValue(value);
   };
 
   return (
-    <>
+    <View style={styles.pickerContainer}>
       <Picker
         values={data} 
         containerWidth={120}
@@ -65,14 +65,14 @@ const App = () => {
       />
 
       <Text>{currentValue}</Text>
-    </>
+    </View>
   );
 };
 
 export default App;
 
 const styles = StyleSheet.create({
-  picker: {
+  pickerContainer: {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'center',
