@@ -1,19 +1,22 @@
 {
-  "name": "react-native-ios-scroll-picker",
+  "name": "@wowmaking/react-native-ios-scroll-picker",
   "version": "1.0.0",
   "description": "Scroll picker like ios",
   "scripts": {
     "build": "tsc --project ./tsconfig.json",
     "lint": "tslint --fix -p ./tsconfig.json",
     "prepare": "bob build",
-    "tsc": "tsc --noEmit"
+    "ts-check": "tsc --noEmit"
   },
   "author": "Dmitry Chistik",
   "keywords": [
     "react-native",
     "react",
     "native",
-    "appsflyer"
+    "picker",
+    "ios-picker",
+    "scroll-picker",
+    "wowmaking"
   ],
   "peerDependencies": {
     "react": "*",
@@ -33,21 +36,19 @@
     "typescript": "^4.4.3"
   },
   "main": "lib/module/index.js",
-  "types": "lib/typescript/src/index.d.ts",
+  "module": "lib/module/index.js",
+  "types": "lib/typescript/index.d.ts",
   "files": [
     "src",
     "lib",
-    "!**/__tests__",
-    "!**/__fixtures__",
-    "!**/__mocks__",
     "lib/**/*"
   ],
-  "react-native": "src/index.ts",
+  "homepage": "https://github.com/dchystsik/react-native-ios-scroll-picker.git#readme",
+  "react-native": "lib/module/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dchystsik/react-native-ios-scroll-picker.git"
   },
-  "module": "lib/module/index.js",
   "react-native-builder-bob": {
     "source": "src",
     "output": "lib",

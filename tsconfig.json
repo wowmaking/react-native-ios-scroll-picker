@@ -15,13 +15,10 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "types": ["react", "react-native"],
-    "moduleResolution": "node",
-    "declaration": true,
-    "outDir": "./lib",
     "skipLibCheck": true
   },
-  "include": ["src", "node_modules/react-native-redash/lib/typescript/v1/index.d.ts"],
-  "exclude": ["node_modules", "lib"]
+  "include": ["src/index.ts"]
 }
