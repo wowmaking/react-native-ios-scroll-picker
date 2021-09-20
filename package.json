@@ -1,7 +1,7 @@
 {
   "name": "@wowmaking/react-native-ios-scroll-picker",
   "version": "1.0.0",
-  "description": "Scroll picker like ios",
+  "description": "Scroll picker like IOS",
   "scripts": {
     "build": "tsc --project ./tsconfig.json",
     "lint": "tslint --fix -p ./tsconfig.json",
@@ -43,11 +43,11 @@
     "lib",
     "lib/**/*"
   ],
-  "homepage": "https://github.com/dchystsik/react-native-ios-scroll-picker.git#readme",
+  "homepage": "https://github.com/wowmaking/react-native-ios-scroll-picker#readme",
   "react-native": "lib/module/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dchystsik/react-native-ios-scroll-picker.git"
+    "url": "git+https://github.com/wowmaking/react-native-ios-scroll-picker.git"
   },
   "react-native-builder-bob": {
     "source": "src",
