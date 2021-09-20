@@ -8,7 +8,7 @@
     "prepare": "bob build",
     "ts-check": "tsc --noEmit"
   },
-  "author": "Dmitry Chistik",
+  "author": "Wowmaking",
   "keywords": [
     "react-native",
     "react",
