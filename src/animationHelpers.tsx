@@ -15,7 +15,8 @@ import Animated, {
   stopClock,
 } from 'react-native-reanimated';
 import { State } from 'react-native-gesture-handler';
-import { snapPoint } from 'react-native-redash/lib/module/v1';
+
+import { snapPoint } from './redash';
 
 interface WithDecayParams {
   itemHeight: number;

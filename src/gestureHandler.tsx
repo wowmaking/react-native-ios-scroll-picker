@@ -8,8 +8,8 @@ import Animated, {
   call,
 } from 'react-native-reanimated';
 import { PanGestureHandler } from 'react-native-gesture-handler';
-import { usePanGestureHandler } from  'react-native-redash/lib/module/v1';
 
+import { usePanGestureHandler } from  './redash';
 import { withDecay } from './animationHelpers';
 
 interface GestureHandlerProps {
@@ -48,7 +48,7 @@ const GestureHandler = ({ value, max, onValueChange, defaultValue, values, visib
 
   useCode(() => [set(value, add(translateY, itemHeight * Math.floor(visibleItems / 2)))], []);
 
-  useCode(() => call([translateY], ([currentValue]: number[]) => {
+  useCode(() => call([translateY], ([currentValue]: any): void => {
     const selectedIndex = Math.round(-currentValue / itemHeight);
     const newValue = values[selectedIndex]?.value;
 

@@ -10,8 +10,8 @@ import Animated, {
   asin,
   cos,
 } from 'react-native-reanimated';
-import { translateZ } from 'react-native-redash/src/v1';
 
+import { translateZ } from './redash';
 import GestureHandler from './gestureHandler';
 
 const perspective = 1600;
@@ -87,7 +87,7 @@ const Picker = ({
               extrapolate: Extrapolate.CLAMP,
             }
           );
-          const rotateX = asin(y);
+          const rotateX: any = asin(y);
           transform.push({ rotateX });
           const z = sub(multiply(radius, cos(rotateX)), radius);
 
