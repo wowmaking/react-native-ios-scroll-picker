@@ -27,7 +27,7 @@ Now we need to install [`react-native-gesture-handler`](https://github.com/kmagi
 ```javascript
 import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Picker from "@wowmaking/react-native-ios-scroll-picker";
+import Picker from '@wowmaking/react-native-ios-scroll-picker';
 
 const start = 2000;
 const years = new Array(new Date().getFullYear() - start + 1)
@@ -65,7 +65,7 @@ const App = () => {
       <Text>{currentValue}</Text>
     </>
   );
-}
+};
 
 export default App;
 
@@ -73,18 +73,18 @@ const styles = StyleSheet.create({
   picker: {
     flex: 1,
     flexDirection: 'row',
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   pickerDevider: {
-    borderColor: "rgba(0,0,0,0.1)",
+    borderColor: 'rgba(0,0,0,0.1)',
     borderTopWidth: 1,
     borderBottomWidth: 1, 
-  }
+  },
   pickerItemLabel: {
     color: '#000000',
     fontSize: 25,
-  }
+  },
 });
 
 ```
@@ -92,14 +92,14 @@ const styles = StyleSheet.create({
 ## Props
 
 | name                      | required | default | description |
-| ------------------------- | -------- | ------- | ---------------------------------------------------------------------------------------|
-| values                    | yes      |         | Items Array of { value: number || '', label: '' }                                      |
-| containerWidth            | yes      |         | Defines width of gesture container                                                     |
-| visibleItems              | yes      |         | Defines how many items will be visible                                                 |
-| itemHeight                | yes      |         | Item height                                                                            |
-| defaultValue              | no       |    0    | Defines selected item by default                                                       |
-| withTranslateZ            | no       |  false  |                                                                                        |
-| withScale                 | no       |  false  |                                                                                        |
-| withOpacity               | no       |  false  |                                                                                        |
-| deviderStyle              | no       |         | Styles for the Devider                                                                 |
-| labelStyle                | no       |         | Styles for label Items                                                                 |
+| ------------------------- | -------- | ------- | ------------|
+| values                    | yes      |         | Items Array |
+| containerWidth            | yes      |         | Defines width of gesture container |
+| visibleItems              | yes      |         | Defines how many items will be visible |
+| itemHeight                | yes      |         | Item height |
+| defaultValue              | no       |    0    | Defines selected item by default |
+| withTranslateZ            | no       |  false  | Enable |
+| withScale                 | no       |  false  | |
+| withOpacity               | no       |  false  | |
+| deviderStyle              | no       |         | Styles for the Devider |
+| labelStyle                | no       |         | Styles for label Items |

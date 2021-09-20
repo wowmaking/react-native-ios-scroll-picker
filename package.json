@@ -1,6 +1,6 @@
 {
   "name": "@wowmaking/react-native-ios-scroll-picker",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Scroll picker like ios",
   "scripts": {
     "build": "tsc --project ./tsconfig.json",

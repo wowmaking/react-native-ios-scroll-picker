@@ -144,16 +144,16 @@ export default Picker;
 
 const styles = StyleSheet.create({
   container: {
-    overflow: "hidden",
+    overflow: 'hidden',
   },
   item: {
-    justifyContent: "center",
+    justifyContent: 'center',
   },
   label: {
-    color: "#000000",
-    fontWeight: "500",
+    color: '#000000',
+    fontWeight: '500',
     fontSize: 24,
-    textAlign: "center",
-    textAlignVertical: "center",
+    textAlign: 'center',
+    textAlignVertical: 'center',
   },
 });
