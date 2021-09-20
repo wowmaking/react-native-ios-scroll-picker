@@ -1,7 +1,9 @@
 # @wowmaking/react-native-ios-scroll-picker
 
-[![npm version](https://badge.fury.io/js/@wowmaking/react-native-ios-scroll-picker.svg)](https://badge.fury.io/js/@wowmaking/react-native-ios-scroll-picker)
+Scroll picker like `IOS UIDatePicker` for React Native on iOS and Android
 
+[![npm version](https://badge.fury.io/js/@wowmaking/react-native-ios-scroll-picker.svg)](https://badge.fury.io/js/@wowmaking/react-native-ios-scroll-picker)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ![](gifs/1.gif)  |  ![](gifs/2.gif) |  ![](gifs/3.gif)  |  ![](gifs/4.gif)  |
 :---------------:|:----------------:|:-----------------:|:-----------------:|
@@ -25,7 +27,7 @@ Now we need to install [`react-native-gesture-handler`](https://github.com/kmagi
 ## Usage
 
 ```javascript
-import * as React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Picker from '@wowmaking/react-native-ios-scroll-picker';
 
@@ -34,7 +36,7 @@ const years = new Array(new Date().getFullYear() - start + 1)
   .fill(0)
   .map((_, i) => {
     const value = start + i;
-    return { value, label: `${value}` };
+    return { value, label: value };
   })
   .reverse();
 
@@ -43,7 +45,7 @@ const App = () => {
   const [currentValue, setCurrentValue] = useState(defaultValue);
 
   const handelPickerItemChange = (value: any) => {
-    setCurrentValue(value)
+    setCurrentValue(value);
   };
 
   return (
