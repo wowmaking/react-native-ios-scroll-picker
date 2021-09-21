@@ -30,16 +30,17 @@
     "lodash.throttle": ">=4.1.1"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.173",
     "@types/react": "^17.0.21",
     "@types/react-native": "^0.65.0",
     "eslint": "^7.32.0",
+    "lodash.throttle": "^4.1.1",
     "react": "^17.0.2",
     "react-native": "^0.65.1",
     "react-native-builder-bob": "^0.18.1",
     "react-native-gesture-handler": "^1.10.3",
     "react-native-haptic-feedback": "^1.11.0",
     "react-native-reanimated": "^2.2.2",
-    "lodash.throttle": "^4.1.1",
     "typescript": "^4.4.3"
   },
   "main": "lib/module/index.js",
