@@ -1,6 +1,6 @@
 # @wowmaking/react-native-ios-scroll-picker
 
-React Native Scroll Picker like `IOS UIDatePicker` on iOS and Android
+React Native Scroll Picker like `IOS UIDatePicker` on iOS and Android. 
 
 [![npm version](https://badge.fury.io/js/@wowmaking%2Freact-native-ios-scroll-picker.svg)](https://badge.fury.io/js/@wowmaking%2Freact-native-ios-scroll-picker)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -22,7 +22,10 @@ Or if you use npm:
 npm i @wowmaking/react-native-ios-scroll-picker --save
 ```
 
-Now we need to install [`react-native-gesture-handler`](https://github.com/kmagiera/react-native-gesture-handler) and [`react-native-reanimated`](https://github.com/kmagiera/react-native-reanimated).
+Now we need to install:
+[`react-native-gesture-handler`](https://github.com/kmagiera/react-native-gesture-handler);
+[`react-native-reanimated`](https://github.com/kmagiera/react-native-reanimated);
+[`react-native-haptic-feedback`](https://github.com/junina-de/react-native-haptic-feedback);
 
 ## Usage
 
