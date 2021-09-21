@@ -13,8 +13,12 @@ import Animated, {
   timing,
   EasingNode,
   stopClock,
+  or,
+  call,
 } from 'react-native-reanimated';
 import { State } from 'react-native-gesture-handler';
+import RNHapticFeedback from 'react-native-haptic-feedback';
+import _throttle from 'lodash/throttle'
 
 import { snapPoint } from './redash';
 
@@ -50,6 +54,15 @@ export const withDecay = (params: WithDecayParams) => {
 
   const defaultIndex = values.findIndex((v) => v.value === defaultValue);
 
+  const vibrate = _throttle(() => {
+    RNHapticFeedback.trigger('selection', {
+      enableVibrateFallback: false,
+      ignoreAndroidSystemSettings: false
+    });
+  }, 100);
+
+  let val = defaultValue;
+
   return block([
     cond(not(init), [
       set(offset, -itemHeight * defaultIndex),
@@ -69,6 +82,18 @@ export const withDecay = (params: WithDecayParams) => {
       timing(clock, state, config),
       cond(state.finished, stopClock(clock)),
     ]),
+    cond(
+      or(eq(gestureState, State.ACTIVE), state.finished),
+      call([state.position], (currentValue) => {
+        const selectedIndex = Math.round(-currentValue / itemHeight);
+        const newValue = values[selectedIndex]?.value;
+
+        if (newValue && newValue !== val) {
+          val = newValue;
+          vibrate();
+        }
+      }),
+    ),
     state.position,
   ]);
 };
