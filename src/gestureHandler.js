@@ -21,7 +21,7 @@ const GestureHandler = ({ value, max, onValueChange, defaultValue, values, visib
     useCode(() => call([translateY], ([currentValue]) => {
         const selectedIndex = Math.round(-currentValue / itemHeight);
         const newValue = values[selectedIndex]?.value;
-        if (typeof onValueChange === 'function' && newValue) {
+        if (typeof onValueChange === 'function' && newValue !== null && newValue !== undefined) {
             onValueChange(newValue);
         }
     }), [translateY]);

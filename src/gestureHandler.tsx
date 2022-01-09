@@ -52,7 +52,7 @@ const GestureHandler = ({ value, max, onValueChange, defaultValue, values, visib
     const selectedIndex = Math.round(-currentValue / itemHeight);
     const newValue = values[selectedIndex]?.value;
 
-    if (typeof onValueChange === 'function' && newValue) {
+    if (typeof onValueChange === 'function' && newValue !== null && newValue !== undefined) {
       onValueChange(newValue);
     }
   }), [translateY]);
