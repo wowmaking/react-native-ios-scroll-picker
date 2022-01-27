@@ -43,7 +43,7 @@ const GestureHandler = ({ value, max, onValueChange, defaultValue, values, visib
         values,
         offset: new Value(0),
       }),
-    [values],
+    [values, defaultValue],
   );
 
   useCode(() => [set(value, add(translateY, itemHeight * Math.floor(visibleItems / 2)))], []);
