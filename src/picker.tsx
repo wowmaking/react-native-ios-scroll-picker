@@ -49,7 +49,7 @@ const Picker = ({
   const radius = radiusRel * itemHeight;
 
   const renderItems = useMemo(() => (
-    <Animated.View style={{ transform: [{ translateY }] }}>
+    <Animated.View style={{ transform: [{ translateY: translateY }] }}>
       {values.map((v, i) => {
         const transform = [];
         const node = divide(sub(translateY, itemHeight * roundedItems), -itemHeight);
