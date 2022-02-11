@@ -43,7 +43,7 @@ const GestureHandler = ({ value, max, onValueChange, defaultValue, values, visib
         values,
         offset: new Value(0),
       }),
-    [values],
+    [values, defaultValue],
   );
 
   useCode(() => [set(value, add(translateY, itemHeight * Math.floor(visibleItems / 2)))], []);
@@ -52,7 +52,7 @@ const GestureHandler = ({ value, max, onValueChange, defaultValue, values, visib
     const selectedIndex = Math.round(-currentValue / itemHeight);
     const newValue = values[selectedIndex]?.value;
 
-    if (typeof onValueChange === 'function' && newValue) {
+    if (typeof onValueChange === 'function' && newValue !== null && newValue !== undefined) {
       onValueChange(newValue);
     }
   }), [translateY]);
