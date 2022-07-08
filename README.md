@@ -55,14 +55,14 @@ const App = () => {
     <View style={styles.pickerContainer}>
       <Picker
         values={years} 
-        containerWidth={120}
         defaultValue={defaultValue} 
         withTranslateZ={true}
         withOpacity={true}
         withScale={true}
         visibleItems={5}
         itemHeight={32}
-        deviderStyle={styles.pickerDevider}
+        containerStyle={styles.containerStyle}
+        dividerStyle={styles.pickerDivider}
         labelStyle={styles.pickerItemLabel}
         onChange={handelPickerChange}
       />
@@ -81,7 +81,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  pickerDevider: {
+  containerStyle: {
+    width: 120,
+  },
+  pickerDivider: {
     borderColor: 'rgba(0,0,0,0.1)',
     borderTopWidth: 1,
     borderBottomWidth: 1, 
@@ -106,5 +109,6 @@ const styles = StyleSheet.create({
 | withTranslateZ            | no       |  false  | Enable |
 | withScale                 | no       |  false  | |
 | withOpacity               | no       |  false  | |
-| deviderStyle              | no       |         | Styles for the Devider |
+| containerStyle            | no       |         | Styles for the outer container |
+| dividerStyle              | no       |         | Styles for the Divider |
 | labelStyle                | no       |         | Styles for label Items |

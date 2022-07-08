@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import {View, StyleSheet, Text, ViewStyle, TextStyle} from 'react-native';
 import Animated, {
   interpolateNode,
   Extrapolate,
@@ -18,7 +18,6 @@ const perspective = 1600;
 
 interface PickerProps {
   values: { value: number | string; label: string }[];
-  containerWidth: number;
   visibleItems: number;
   itemHeight: number;
   defaultValue?: number | string;
@@ -26,21 +25,22 @@ interface PickerProps {
   withTranslateZ?: boolean;
   withScale?: boolean;
   withOpacity?: boolean;
-  deviderStyle?: any;
-  labelStyle?: any;
+  containerStyle?: ViewStyle;
+  dividerStyle?: ViewStyle;
+  labelStyle?: TextStyle;
 }
 
-const Picker = ({ 
-    containerWidth, 
-    values, 
-    defaultValue, 
-    visibleItems, 
-    itemHeight, 
-    onChange, 
+const Picker = ({
+    values,
+    defaultValue,
+    visibleItems,
+    itemHeight,
+    onChange,
     withTranslateZ,
     withScale,
     withOpacity,
-    deviderStyle,
+    containerStyle,
+    dividerStyle,
     labelStyle,
   }: PickerProps) => {
   const translateY = useValue(0);
@@ -72,7 +72,7 @@ const Picker = ({
               extrapolate: Extrapolate.CLAMP,
             }
           );
-  
+
           transform.push({ scale });
         }
 
@@ -114,7 +114,7 @@ const Picker = ({
   ), []);
 
   return (
-    <View style={[styles.container, { width: containerWidth, height: itemHeight * visibleItems }]}>
+    <View style={[styles.container, { height: itemHeight * visibleItems }, containerStyle]}>
       <View style={StyleSheet.absoluteFill}>
         <View
           style={
@@ -122,7 +122,7 @@ const Picker = ({
               top: itemHeight * roundedItems,
               height: itemHeight,
             },
-            deviderStyle,
+            dividerStyle,
           ]}
         />
       </View>
